@@ -21,7 +21,6 @@
       --text-primary:      #102740;
       --text-secondary:    #475569;
       --text-muted:        #94A3B8;
-      /* Semantic — scenarios */
       --scn-pess:          #DC2626;
       --scn-pess-soft:     #FEE2E2;
       --scn-real:          #EF4465;
@@ -42,7 +41,6 @@
 
     .container { max-width: 1100px; margin: 0 auto; }
 
-    /* ── Header ── */
     .header {
       display: flex;
       align-items: center;
@@ -50,24 +48,13 @@
       gap: 18px;
       margin-bottom: 32px;
     }
-    .header .logo {
-      width: 60px; height: 60px;
-      flex-shrink: 0;
-    }
+    .header .logo { width: 60px; height: 60px; flex-shrink: 0; }
     .header h1 {
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
+      font-size: 1.9rem; font-weight: 800;
+      color: var(--text-primary); letter-spacing: -0.5px; line-height: 1.1;
     }
-    .header p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
+    .header p { font-size: 0.95rem; color: var(--text-secondary); margin-top: 4px; }
 
-    /* ── Card ── */
     .card {
       background: var(--bg-card);
       border-radius: 16px;
@@ -79,54 +66,36 @@
 
     .section-title { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
     .section-num {
-      width: 30px; height: 30px;
-      border-radius: 50%;
-      background: var(--brand-pink);
-      color: white;
-      font-size: 0.85rem;
-      font-weight: 700;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--brand-pink); color: white;
+      font-size: 0.85rem; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
+      flex-shrink: 0; margin-top: 1px;
       box-shadow: 0 2px 8px rgba(239, 68, 101, 0.30);
     }
     .section-title h3 { font-size: 1rem; font-weight: 700; color: var(--text-primary); }
     .section-title p  { font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; }
 
-    /* ── Form fields ── */
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
     .form-row.cols-2 { grid-template-columns: 1fr 1fr; }
     .field { display: flex; flex-direction: column; gap: 6px; }
     .field label {
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: var(--text-primary);
+      font-size: 0.84rem; font-weight: 600; color: var(--text-primary);
       display: flex; align-items: center; gap: 8px;
     }
     .field .hint { font-size: 0.73rem; color: var(--text-muted); }
 
     .auto-tag {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em;
       text-transform: uppercase;
-      background: var(--brand-pink-soft);
-      color: var(--brand-pink-dark);
-      padding: 2px 7px;
-      border-radius: 10px;
+      background: var(--brand-pink-soft); color: var(--brand-pink-dark);
+      padding: 2px 7px; border-radius: 10px;
     }
 
     .input-group {
-      display: flex;
-      align-items: center;
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      background: var(--bg-light);
+      display: flex; align-items: center;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      overflow: hidden; background: var(--bg-light);
       transition: border-color 0.2s, box-shadow 0.2s;
     }
     .input-group:focus-within {
@@ -140,24 +109,14 @@
       outline: none; min-width: 0;
     }
     .input-group .unit {
-      padding: 10px 13px;
-      font-size: 0.82rem; color: var(--text-secondary);
-      background: var(--bg-soft);
-      border-left: 1px solid var(--border);
-      white-space: nowrap;
+      padding: 10px 13px; font-size: 0.82rem; color: var(--text-secondary);
+      background: var(--bg-soft); border-left: 1px solid var(--border); white-space: nowrap;
     }
 
-    /* Read-only display (Realista) */
-    .input-group.readonly {
-      border-color: var(--brand-pink-soft);
-      background: var(--brand-pink-bg);
-    }
+    .input-group.readonly { border-color: var(--brand-pink-soft); background: var(--brand-pink-bg); }
     .input-group .ro-value {
-      flex: 1;
-      padding: 10px 14px;
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--brand-pink);
+      flex: 1; padding: 10px 14px;
+      font-size: 1rem; font-weight: 800; color: var(--brand-pink);
     }
 
     .divider { border: none; border-top: 1px solid var(--border); margin: 22px 0; }
@@ -172,6 +131,7 @@
       border-radius: 10px;
       padding: 10px 12px;
       animation: fadeIn 0.2s ease;
+      flex-wrap: wrap;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-6px); }
@@ -179,19 +139,39 @@
     }
     .np-item input[type="text"] {
       flex: 1; border: none; background: transparent;
-      font-size: 0.9rem; color: var(--text-primary); outline: none; min-width: 0;
+      font-size: 0.9rem; color: var(--text-primary); outline: none; min-width: 140px;
     }
     .np-item input[type="text"]::placeholder { color: var(--text-muted); }
+
     .np-time-group { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
     .np-time-group input {
       width: 76px; padding: 6px 10px;
       border: 1px solid var(--border); border-radius: 8px;
       background: white; font-size: 0.9rem; color: var(--text-primary);
-      outline: none; text-align: center;
-      transition: border-color 0.2s;
+      outline: none; text-align: center; transition: border-color 0.2s;
     }
     .np-time-group input:focus { border-color: var(--brand-pink); }
     .np-time-group span { font-size: 0.8rem; color: var(--text-muted); }
+
+    .np-freq {
+      padding: 6px 10px;
+      border: 1px solid var(--border); border-radius: 8px;
+      background: white; font-size: 0.82rem; color: var(--text-primary);
+      outline: none; cursor: pointer; flex-shrink: 0;
+      transition: border-color 0.2s;
+    }
+    .np-freq:focus { border-color: var(--brand-pink); }
+
+    .np-week-group { display: none; align-items: center; gap: 4px; flex-shrink: 0; }
+    .np-week-group.show { display: flex; }
+    .np-week-group input {
+      width: 52px; padding: 6px 8px;
+      border: 1px solid var(--border); border-radius: 8px;
+      background: white; font-size: 0.85rem; color: var(--text-primary);
+      outline: none; text-align: center; transition: border-color 0.2s;
+    }
+    .np-week-group input:focus { border-color: var(--brand-pink); }
+    .np-week-group span { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
 
     .btn-remove {
       width: 30px; height: 30px; border: none;
@@ -199,9 +179,7 @@
       border-radius: 7px; cursor: pointer;
       font-size: 16px; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      transition: background 0.15s;
-      line-height: 1;
+      flex-shrink: 0; transition: background 0.15s; line-height: 1;
     }
     .btn-remove:hover { background: #FECACA; }
 
@@ -215,7 +193,14 @@
     }
     .btn-add:hover { border-color: var(--brand-pink); color: var(--brand-pink); background: var(--brand-pink-bg); }
 
-    /* ── Error ── */
+    .freq-legend {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-top: 10px;
+      font-size: 0.73rem; color: var(--text-muted);
+    }
+    .freq-legend span { display: flex; align-items: center; gap: 4px; }
+    .freq-legend b { color: var(--text-secondary); }
+
     .error-msg {
       background: #FEF2F2; border: 1px solid #FCA5A5;
       color: #B91C1C; padding: 12px 16px; border-radius: 10px;
@@ -223,21 +208,17 @@
     }
     .error-msg.show { display: block; }
 
-    /* ── Calculate button ── */
     .btn-calculate {
       width: 100%; padding: 16px;
       background: linear-gradient(135deg, #EF4465, #D63854);
       color: white; border: none; border-radius: 12px;
       font-size: 1.05rem; font-weight: 700; cursor: pointer;
       box-shadow: 0 8px 20px rgba(239, 68, 101, 0.30);
-      transition: all 0.2s;
-      margin-bottom: 20px;
-      letter-spacing: 0.3px;
+      transition: all 0.2s; margin-bottom: 20px; letter-spacing: 0.3px;
     }
     .btn-calculate:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(239, 68, 101, 0.40); }
     .btn-calculate:active { transform: translateY(0); }
 
-    /* ── Results ── */
     .results-section { display: none; }
     .results-section.visible { display: block; }
 
@@ -245,41 +226,27 @@
     .results-header h2 { font-size: 1.35rem; font-weight: 800; color: var(--text-primary); }
     .results-header p { font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; }
 
-    /* ── View toggle ── */
     .view-toggle-wrap { display: flex; justify-content: center; margin-bottom: 22px; }
     .view-toggle {
-      display: inline-flex;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 11px;
-      padding: 4px;
-      box-shadow: 0 2px 6px rgba(16, 39, 64, 0.06);
+      display: inline-flex; background: white;
+      border: 1px solid var(--border); border-radius: 11px;
+      padding: 4px; box-shadow: 0 2px 6px rgba(16, 39, 64, 0.06);
     }
     .vt-btn {
-      padding: 9px 22px;
-      border: none;
-      background: transparent;
-      color: var(--text-secondary);
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: all 0.2s;
-      font-size: 0.875rem;
+      padding: 9px 22px; border: none; background: transparent;
+      color: var(--text-secondary); font-weight: 600; cursor: pointer;
+      border-radius: 8px; transition: all 0.2s; font-size: 0.875rem;
       display: flex; align-items: center; gap: 7px;
     }
     .vt-btn:hover { color: var(--text-primary); }
     .vt-btn.active {
-      background: var(--brand-pink);
-      color: white;
+      background: var(--brand-pink); color: white;
       box-shadow: 0 2px 8px rgba(239, 68, 101, 0.30);
     }
 
-    /* ── Summary row ── */
     .summary-row {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-      margin-bottom: 20px;
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 12px; margin-bottom: 20px;
     }
     .summary-card {
       background: white; border-radius: 12px;
@@ -287,57 +254,38 @@
       padding: 16px 12px; text-align: center;
       box-shadow: 0 2px 8px rgba(16, 39, 64, 0.04);
     }
-    .summary-card .s-value {
-      font-size: 1.4rem; font-weight: 800;
-      color: var(--text-primary); margin-bottom: 4px;
-    }
-    .summary-card .s-label {
-      font-size: 0.68rem; color: var(--text-muted);
-      font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
-    }
+    .summary-card .s-value { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .summary-card .s-label { font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 
-    /* ── Params print summary ── */
     .params-summary {
-      display: none;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin-bottom: 20px;
+      display: none; background: white;
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: 16px 20px; margin-bottom: 20px;
     }
     .params-summary h4 { font-size: 0.875rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
     .params-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .param-tag {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
-      color: var(--text-secondary);
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: 6px; padding: 4px 10px;
+      font-size: 0.78rem; color: var(--text-secondary);
     }
     .param-tag strong { color: var(--text-primary); }
 
-    /* ── Scenario cards ── */
     .scenarios-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-bottom: 20px;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 18px; margin-bottom: 20px;
     }
     .sc-card {
       background: white; border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
+      overflow: hidden; border: 1px solid var(--border);
       box-shadow: 0 4px 16px rgba(16, 39, 64, 0.06);
     }
     .sc-head { padding: 20px 18px 18px; color: white; text-align: center; }
     .sc-head .sc-badge {
-      display: inline-block;
-      font-size: 0.65rem; font-weight: 700;
+      display: inline-block; font-size: 0.65rem; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.12em;
-      background: rgba(255,255,255,0.22);
-      border-radius: 20px; padding: 3px 10px;
-      margin-bottom: 8px;
+      background: rgba(255,255,255,0.22); border-radius: 20px;
+      padding: 3px 10px; margin-bottom: 8px;
     }
     .sc-head h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
     .sc-head .sc-eff { font-size: 0.78rem; opacity: 0.92; }
@@ -349,16 +297,13 @@
     .sc-body { padding: 18px; }
 
     .sc-main {
-      text-align: center;
-      padding: 14px 0 16px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 14px;
+      text-align: center; padding: 14px 0 16px;
+      border-bottom: 1px solid var(--border); margin-bottom: 14px;
     }
     .sc-period-block { display: none; }
     .sc-period-block.active { display: block; }
     .sc-period-block .big-num {
-      font-size: 3.5rem; font-weight: 900; line-height: 1;
-      margin-bottom: 4px;
+      font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 4px;
     }
     .sc-card.pessimista .big-num { color: var(--scn-pess); }
     .sc-card.realista   .big-num { color: var(--brand-pink); }
@@ -368,107 +313,102 @@
       font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
     }
     .sc-period-block .big-period {
-      display: inline-block;
-      font-size: 0.65rem; font-weight: 700;
+      display: inline-block; font-size: 0.65rem; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.08em;
-      margin-top: 6px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      background: var(--bg-soft);
-      color: var(--text-secondary);
+      margin-top: 6px; padding: 2px 8px; border-radius: 10px;
+      background: var(--bg-soft); color: var(--text-secondary);
     }
 
     .sc-metrics { display: flex; flex-direction: column; gap: 0; }
     .sc-metric {
       display: flex; justify-content: space-between; align-items: center;
-      padding: 7px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.82rem;
+      padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 0.82rem;
     }
     .sc-metric:last-child { border-bottom: none; }
     .sc-metric .ml { color: var(--text-muted); }
     .sc-metric .mv { font-weight: 700; color: var(--text-primary); }
 
-    .sc-alt {
-      background: var(--bg-light);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 11px 14px;
-      margin-top: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .sc-alt .alt-label { font-size: 0.74rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
-    .sc-alt .alt-value { font-size: 1.15rem; font-weight: 800; color: var(--brand-navy); }
-
     .sc-insight {
-      margin-top: 14px;
-      padding: 11px 13px;
-      border-radius: 9px;
-      font-size: 0.78rem;
-      line-height: 1.55;
+      margin-top: 14px; padding: 11px 13px; border-radius: 9px;
+      font-size: 0.78rem; line-height: 1.55;
     }
     .sc-card.pessimista .sc-insight { background: var(--scn-pess-soft); color: #7F1D1D; border-left: 3px solid var(--scn-pess); }
     .sc-card.realista   .sc-insight { background: var(--scn-real-soft); color: #831843; border-left: 3px solid var(--scn-real); }
     .sc-card.otimista   .sc-insight { background: var(--scn-oti-soft); color: #064E3B; border-left: 3px solid var(--scn-oti); }
 
+    /* ── Monthly breakdown ── */
+    .monthly-breakdown {
+      background: white; border: 1px solid var(--border);
+      border-radius: 16px; padding: 22px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(16, 39, 64, 0.05);
+    }
+    .monthly-breakdown h4 {
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 16px;
+    }
+    .mbd-freq-header {
+      font-size: 0.74rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.07em;
+      margin-bottom: 7px; padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mbd-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6px; margin-bottom: 12px;
+    }
+    .mbd-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 12px; background: var(--bg-soft); border-radius: 8px;
+      font-size: 0.82rem; gap: 8px;
+    }
+    .mbd-item .mbd-name { color: var(--text-secondary); flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .mbd-item .mbd-val { font-weight: 700; color: var(--text-primary); flex-shrink: 0; }
+    .mbd-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+    .mbd-total {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 14px; border-radius: 9px; font-size: 0.875rem;
+    }
+    .mbd-total.red { background: var(--scn-pess-soft); }
+    .mbd-total.red .mbd-name { color: #991B1B; font-weight: 600; }
+    .mbd-total.red .mbd-val { color: var(--scn-pess); font-weight: 800; }
+    .mbd-total.green { background: var(--scn-oti-soft); }
+    .mbd-total.green .mbd-name { color: #065F46; font-weight: 600; }
+    .mbd-total.green .mbd-val { color: var(--scn-oti); font-weight: 800; }
+
     /* ── Charts ── */
     .charts-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      text-align: center;
-      margin: 8px 0 16px;
+      font-size: 1.05rem; font-weight: 700; color: var(--text-primary);
+      text-align: center; margin: 8px 0 16px;
     }
     .charts-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-bottom: 20px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 18px; margin-bottom: 20px;
     }
     .chart-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px 20px 22px;
+      background: white; border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px 20px 22px;
       box-shadow: 0 4px 16px rgba(16, 39, 64, 0.05);
     }
     .chart-card.full { grid-column: 1 / -1; }
-    .chart-card h4 {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 4px;
-    }
-    .chart-card .chart-sub {
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
+    .chart-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    .chart-card .chart-sub { font-size: 0.74rem; color: var(--text-muted); margin-bottom: 14px; }
     .chart-wrap { position: relative; height: 280px; }
     .chart-card.full .chart-wrap { height: 260px; }
 
-    /* ── Analysis card ── */
     .analysis-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
+      background: white; border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px;
       box-shadow: 0 4px 16px rgba(16, 39, 64, 0.05);
       margin-bottom: 20px;
     }
     .analysis-card h3 { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 18px; }
     .analysis-items { display: flex; flex-direction: column; gap: 14px; }
     .analysis-item { display: flex; gap: 13px; align-items: flex-start; }
-    .a-dot {
-      width: 9px; height: 9px; border-radius: 50%;
-      margin-top: 5px; flex-shrink: 0;
-    }
+    .a-dot { width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
     .analysis-item p { font-size: 0.855rem; color: var(--text-secondary); line-height: 1.65; }
     .analysis-item p strong { color: var(--text-primary); }
 
-    /* ── PDF button ── */
     .pdf-wrapper { text-align: center; margin-bottom: 32px; }
     .btn-pdf {
       display: inline-flex; align-items: center; gap: 10px;
@@ -476,16 +416,61 @@
       background: linear-gradient(135deg, var(--brand-navy), var(--brand-navy-soft));
       color: white; border: none; border-radius: 12px;
       font-size: 1rem; font-weight: 700; cursor: pointer;
-      box-shadow: 0 8px 20px rgba(16, 39, 64, 0.25);
-      transition: all 0.2s;
+      box-shadow: 0 8px 20px rgba(16, 39, 64, 0.25); transition: all 0.2s;
     }
     .btn-pdf:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(16, 39, 64, 0.35); }
     .btn-pdf svg { width: 20px; height: 20px; flex-shrink: 0; }
 
-    /* ── Responsive ── */
+    /* ── Methodology block ── */
+    .methodology-block { margin-top: 8px; }
+    .method-sections {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px;
+    }
+    .method-section {
+      padding: 18px; background: var(--bg-soft);
+      border-radius: 12px; border: 1px solid var(--border);
+    }
+    .method-section h4 {
+      font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .method-icon {
+      width: 24px; height: 24px; border-radius: 6px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 800; flex-shrink: 0;
+    }
+    .method-formula {
+      font-family: 'Courier New', monospace; font-size: 0.8rem;
+      background: white; border: 1px solid var(--border);
+      border-left: 3px solid var(--brand-pink); border-radius: 6px;
+      padding: 10px 12px; margin-bottom: 10px;
+      color: var(--brand-pink-dark); font-weight: 600; line-height: 1.6;
+    }
+    .method-section p {
+      font-size: 0.81rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 8px;
+    }
+    .method-list {
+      list-style: none; padding: 0; margin: 6px 0; display: flex; flex-direction: column; gap: 4px;
+    }
+    .method-list li {
+      font-size: 0.79rem; color: var(--text-secondary);
+      padding: 5px 10px; background: white; border-radius: 6px; border: 1px solid var(--border);
+      display: flex; justify-content: space-between; gap: 8px;
+    }
+    .method-list li strong { color: var(--text-primary); flex-shrink: 0; }
+    .method-example {
+      font-size: 0.77rem; color: var(--text-muted);
+      background: var(--brand-pink-bg); border-radius: 6px;
+      padding: 8px 10px; margin-top: 8px; line-height: 1.6;
+    }
+    .method-example strong { color: var(--brand-pink-dark); }
+
     @media (max-width: 900px) {
       .summary-row { grid-template-columns: repeat(3, 1fr); }
       .charts-grid { grid-template-columns: 1fr; }
+      .mbd-grid { grid-template-columns: 1fr; }
+      .mbd-totals { grid-template-columns: 1fr; }
+      .method-sections { grid-template-columns: 1fr; }
     }
     @media (max-width: 700px) {
       .form-row { grid-template-columns: 1fr; }
@@ -496,56 +481,31 @@
       .header h1 { font-size: 1.5rem; }
     }
 
-    /* ── Print ── */
     @media print {
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-
       body { background: white !important; padding: 0; color: var(--text-primary); }
       .container { max-width: 100%; }
-
       .header { display: none !important; }
       .input-section { display: none !important; }
       .btn-calculate { display: none !important; }
       .pdf-wrapper { display: none !important; }
       .view-toggle-wrap { display: none !important; }
-
       .results-section { display: block !important; }
       .params-summary { display: block !important; }
-
-      .sc-card, .summary-card, .analysis-card, .chart-card {
-        box-shadow: none !important;
-        break-inside: avoid;
-      }
+      .sc-card, .summary-card, .analysis-card, .chart-card { box-shadow: none !important; break-inside: avoid; }
       .scenarios-row { page-break-inside: avoid; }
       .charts-grid    { page-break-inside: avoid; }
-
-      .print-header { display: block !important; }
-
-      /* PDF: show BOTH day and month in scenario cards */
-      .sc-main {
-        display: flex !important;
-        gap: 10px;
-        padding: 12px 0 14px;
-      }
-      .sc-period-block,
-      .sc-period-block.active { display: block !important; flex: 1; padding: 0 6px; }
-      .sc-period-block + .sc-period-block { border-left: 1px solid var(--border); }
-      .sc-period-block .big-num { font-size: 2.2rem !important; }
-      .sc-period-block .big-period { display: none !important; }
-      .sc-alt { display: none !important; } /* alt no longer needed since both periods shown */
-
+      .print-header { display: flex !important; }
       .summary-row    { grid-template-columns: repeat(5, 1fr); }
       .scenarios-row  { grid-template-columns: repeat(3, 1fr); }
       .charts-grid    { grid-template-columns: 1fr 1fr; }
       .chart-wrap     { height: 220px; }
+      .sc-period-block.active { display: block !important; }
     }
 
     .print-header {
-      display: none;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 22px;
-      padding-bottom: 14px;
+      display: none; align-items: center; gap: 12px;
+      margin-bottom: 22px; padding-bottom: 14px;
       border-bottom: 2px solid var(--border);
     }
     .print-header .logo { width: 40px; height: 40px; flex-shrink: 0; }
@@ -556,7 +516,6 @@
 <body>
 <div class="container">
 
-  <!-- ── Conexa logo (inline SVG) ── -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="conexaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -574,7 +533,6 @@
     </defs>
   </svg>
 
-  <!-- Print-only header -->
   <div class="print-header">
     <svg class="logo"><use href="#conexaLogo"/></svg>
     <div>
@@ -583,7 +541,6 @@
     </div>
   </div>
 
-  <!-- Header (screen only) -->
   <div class="header">
     <svg class="logo"><use href="#conexaLogo"/></svg>
     <div>
@@ -638,7 +595,7 @@
       <div class="section-num">2</div>
       <div>
         <h3>Outras demandas</h3>
-        <p>Demandas realizadas paralelamente, como eventos e reuniões</p>
+        <p>Cadastre todas as demandas paralelas e defina a frequência de cada uma. A capacidade diária considera apenas demandas diárias; a capacidade mensal considera todas as frequências.</p>
       </div>
     </div>
 
@@ -649,6 +606,16 @@
           <input type="number" class="np-minutes" value="30" min="0" placeholder="0">
           <span>min</span>
         </div>
+        <select class="np-freq" onchange="onFreqChange(this)">
+          <option value="daily" selected>Diária</option>
+          <option value="weekly">Semanal</option>
+          <option value="biweekly">Quinzenal</option>
+          <option value="monthly">Mensal</option>
+        </select>
+        <div class="np-week-group">
+          <input type="number" class="np-times-week" value="1" min="1" max="5">
+          <span>×/sem</span>
+        </div>
         <button class="btn-remove" onclick="removeNpItem(this)" title="Remover">&#x2715;</button>
       </div>
     </div>
@@ -657,6 +624,13 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
       Adicionar demanda
     </button>
+
+    <div class="freq-legend">
+      <span><b>Diária</b> — ocorre todo dia útil (afeta capacidade diária e mensal)</span>
+      <span><b>Semanal</b> — ocorre X vezes por semana (apenas mensal)</span>
+      <span><b>Quinzenal</b> — 2× no mês (apenas mensal)</span>
+      <span><b>Mensal</b> — 1× no mês (apenas mensal)</span>
+    </div>
 
     <hr class="divider">
 
@@ -694,25 +668,18 @@
       <div class="section-num">4</div>
       <div>
         <h3>Cenários de Eficiência</h3>
-        <p>Ajuste os cenários Pessimista e Otimista. O Realista é calculado automaticamente a partir dos dados acima.</p>
+        <p>Defina os extremos Pessimista e Otimista manualmente. Os cenários Realistas (diário e mensal) são calculados automaticamente a partir das demandas cadastradas.</p>
       </div>
     </div>
-    <div class="form-row">
+
+    <div class="form-row cols-2">
       <div class="field">
         <label>Eficiência Pessimista</label>
         <div class="input-group">
           <input type="number" id="pessEff" value="75" min="1" max="100" step="1">
           <span class="unit">%</span>
         </div>
-        <span class="hint">% do tempo total efetivamente em atendimento (pior caso)</span>
-      </div>
-      <div class="field">
-        <label>Eficiência Realista <span class="auto-tag">Auto</span></label>
-        <div class="input-group readonly">
-          <div class="ro-value" id="realEffDisplay">87,5%</div>
-          <span class="unit">%</span>
-        </div>
-        <span class="hint">(jornada − outras demandas) ÷ jornada</span>
+        <span class="hint">Pior caso — usado nas visões diária e mensal</span>
       </div>
       <div class="field">
         <label>Eficiência Otimista</label>
@@ -720,12 +687,30 @@
           <input type="number" id="otiEff" value="95" min="1" max="100" step="1">
           <span class="unit">%</span>
         </div>
-        <span class="hint">% do tempo total efetivamente em atendimento (melhor caso)</span>
+        <span class="hint">Melhor caso — usado nas visões diária e mensal</span>
+      </div>
+    </div>
+
+    <div class="form-row cols-2" style="margin-top:14px">
+      <div class="field">
+        <label>Eficiência Realista — Diária <span class="auto-tag">Auto</span></label>
+        <div class="input-group readonly">
+          <div class="ro-value" id="realEffDisplay">87,5%</div>
+          <span class="unit">%</span>
+        </div>
+        <span class="hint">(jornada − demandas diárias) ÷ jornada</span>
+      </div>
+      <div class="field">
+        <label>Eficiência Realista — Mensal <span class="auto-tag">Auto</span></label>
+        <div class="input-group readonly">
+          <div class="ro-value" id="monthlyRealEffDisplay">—</div>
+          <span class="unit">%</span>
+        </div>
+        <span class="hint">(jornada mensal − total demandas no mês) ÷ jornada mensal</span>
       </div>
     </div>
   </div>
 
-  <!-- ── Calculate ── -->
   <button class="btn-calculate" onclick="calculate()">Calcular Capacidade do Time</button>
 
   <!-- ── Results ── -->
@@ -741,11 +726,11 @@
       <div class="view-toggle">
         <button class="vt-btn active" data-view="day" onclick="setView('day')">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          Visão Dia
+          Capacidade Diária
         </button>
         <button class="vt-btn" data-view="month" onclick="setView('month')">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Visão Mês
+          Capacidade Mensal
         </button>
       </div>
     </div>
@@ -762,12 +747,15 @@
     <!-- Scenario cards -->
     <div class="scenarios-row" id="scenariosRow"></div>
 
+    <!-- Monthly breakdown (only visible in month view) -->
+    <div id="monthlyBreakdown" style="display:none"></div>
+
     <!-- Charts -->
     <h3 class="charts-title">Análise Gráfica</h3>
     <div class="charts-grid">
       <div class="chart-card">
         <h4>Distribuição do tempo na jornada</h4>
-        <div class="chart-sub">Como o tempo de cada pessoa é dividido por dia</div>
+        <div class="chart-sub">Como o tempo de cada pessoa é dividido por dia (demandas diárias)</div>
         <div class="chart-wrap"><canvas id="chartTime"></canvas></div>
       </div>
       <div class="chart-card">
@@ -794,19 +782,92 @@
     </div>
 
   </div>
+
+  <!-- ── Metodologia ── -->
+  <div class="card methodology-block">
+    <div class="section-title">
+      <div class="section-num" style="background:var(--brand-navy);box-shadow:0 2px 8px rgba(16,39,64,0.25)">✦</div>
+      <div>
+        <h3>Metodologia de Cálculo</h3>
+        <p>Como os índices de eficiência e o número de tickets são calculados em cada visão</p>
+      </div>
+    </div>
+
+    <div class="method-sections">
+
+      <div class="method-section">
+        <h4>
+          <span class="method-icon" style="background:var(--brand-pink-soft);color:var(--brand-pink)">D</span>
+          Eficiência Realista — Diária
+        </h4>
+        <div class="method-formula">
+          Efic. = (Jornada − Demandas diárias) ÷ Jornada
+        </div>
+        <p>Desconta apenas as demandas com frequência <strong>Diária</strong>, pois são as que impactam todos os dias de atendimento.</p>
+        <ul class="method-list">
+          <li><strong>Jornada</strong> <span>horas/dia × 60 min</span></li>
+          <li><strong>Demandas diárias</strong> <span>soma dos minutos de cada item diário</span></li>
+        </ul>
+        <div class="method-example">
+          Exemplo: jornada 8 h (480 min), standup 30 min →<br>
+          (480 − 30) ÷ 480 = <strong>93,75%</strong>
+        </div>
+      </div>
+
+      <div class="method-section">
+        <h4>
+          <span class="method-icon" style="background:#EEF2FF;color:#4F46E5">M</span>
+          Eficiência Realista — Mensal
+        </h4>
+        <div class="method-formula">
+          Efic. = (Jornada mensal − Total demandas mês) ÷ Jornada mensal
+        </div>
+        <p>Considera <strong>todas</strong> as demandas ponderadas pela frequência:</p>
+        <ul class="method-list">
+          <li><strong>Diária</strong> <span>min × dias úteis no mês</span></li>
+          <li><strong>Semanal</strong> <span>min × vezes/sem × semanas no mês</span></li>
+          <li><strong>Quinzenal</strong> <span>min × 2</span></li>
+          <li><strong>Mensal</strong> <span>min × 1</span></li>
+        </ul>
+        <div class="method-example">
+          Semanas no mês = arredondamento de (dias úteis ÷ 5).<br>
+          Ex.: 22 dias → ~4 semanas.
+        </div>
+      </div>
+
+      <div class="method-section">
+        <h4>
+          <span class="method-icon" style="background:var(--scn-oti-soft);color:var(--scn-oti)">T</span>
+          Capacidade de Atendimento
+        </h4>
+        <div class="method-formula">
+          Por pessoa = ⌊(Jornada × Eficiência) ÷ TMR⌋ × Simultâneos<br>
+          Time = Por pessoa × Nº de pessoas
+        </div>
+        <p>O <strong>TMR</strong> (Tempo Médio de Resolução) define quantos atendimentos cabem no tempo produtivo. Tickets simultâneos multiplicam a capacidade individual.</p>
+        <ul class="method-list">
+          <li><strong>Visão Diária</strong> <span>usa a jornada em minutos do dia</span></li>
+          <li><strong>Visão Mensal</strong> <span>usa jornada diária × dias trabalhados</span></li>
+        </ul>
+        <div class="method-example">
+          O ⌊ ⌋ indica piso (floor): somente atendimentos completos são contados, sem arredondamento para cima.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 <script>
-  /* ── Globals ── */
   let currentView = 'day';
   let lastCalc = null;
   const charts = { time: null, scenarios: null, tmr: null };
 
   const BRAND_PINK = '#EF4465';
   const BRAND_NAVY = '#102740';
-  const NP_PALETTE = ['#EF4465', '#F59E0B', '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16', '#F97316', '#14B8A6', '#A855F7', '#3B82F6'];
+  const NP_PALETTE = ['#EF4465','#F59E0B','#8B5CF6','#EC4899','#06B6D4','#84CC16','#F97316','#14B8A6','#A855F7','#3B82F6'];
 
-  /* ── Helpers ── */
   function fmtMin(m) {
     m = Math.round(m);
     if (m <= 0) return '0 min';
@@ -817,7 +878,23 @@
   function fmtNum(n) { return Math.round(n).toLocaleString('pt-BR'); }
   function fmtPctNum(n) { return n.toFixed(1).replace('.0', '').replace('.', ','); }
 
-  /* ── Non-productive list ── */
+  function freqLabel(freq, timesPerWeek) {
+    if (freq === 'daily')    return 'Diária';
+    if (freq === 'weekly')   return timesPerWeek > 1 ? timesPerWeek + '×/sem' : 'Semanal';
+    if (freq === 'biweekly') return 'Quinzenal';
+    if (freq === 'monthly')  return 'Mensal';
+    return freq;
+  }
+
+  /* ── Freq change ── */
+  function onFreqChange(select) {
+    const item = select.closest('.np-item');
+    const weekGroup = item.querySelector('.np-week-group');
+    weekGroup.classList.toggle('show', select.value === 'weekly');
+    updateRealistaDisplay();
+  }
+
+  /* ── NP list ── */
   function addNpItem() {
     const list = document.getElementById('npList');
     const el = document.createElement('div');
@@ -828,12 +905,23 @@
         <input type="number" class="np-minutes" value="" min="0" placeholder="0">
         <span>min</span>
       </div>
+      <select class="np-freq" onchange="onFreqChange(this)">
+        <option value="daily">Diária</option>
+        <option value="weekly">Semanal</option>
+        <option value="biweekly">Quinzenal</option>
+        <option value="monthly">Mensal</option>
+      </select>
+      <div class="np-week-group">
+        <input type="number" class="np-times-week" value="1" min="1" max="5">
+        <span>×/sem</span>
+      </div>
       <button class="btn-remove" onclick="removeNpItem(this)" title="Remover">&#x2715;</button>
     `;
     list.appendChild(el);
     el.querySelector('input[type="text"]').focus();
     updateRealistaDisplay();
   }
+
   function removeNpItem(btn) {
     const item = btn.closest('.np-item');
     item.style.transition = 'opacity 0.18s, transform 0.18s';
@@ -841,31 +929,78 @@
     item.style.transform = 'translateY(-6px)';
     setTimeout(() => { item.remove(); updateRealistaDisplay(); }, 180);
   }
+
   function getNpData() {
     const items = [];
-    let total = 0;
     document.querySelectorAll('.np-item').forEach(el => {
       const name = el.querySelector('input[type="text"]').value.trim() || 'Atividade';
       const mins = parseFloat(el.querySelector('.np-minutes').value) || 0;
-      if (mins > 0) { items.push({ name, mins }); total += mins; }
+      const freqEl = el.querySelector('.np-freq');
+      const freq = freqEl ? freqEl.value : 'daily';
+      const twEl = el.querySelector('.np-times-week');
+      const timesPerWeek = twEl ? (parseInt(twEl.value) || 1) : 1;
+      if (mins > 0) items.push({ name, mins, freq, timesPerWeek });
     });
-    return { items, total };
+    const dailyItems = items.filter(i => i.freq === 'daily');
+    const totalDaily = dailyItems.reduce((s, i) => s + i.mins, 0);
+    return { items, dailyItems, totalDaily };
   }
 
-  /* ── Live Realista display ── */
+  /* ── Monthly non-prod calculation ── */
+  function computeMonthlyNonProd(items, workingDays) {
+    const weeksInMonth = Math.round(workingDays / 5);
+    let total = 0;
+    const byFreq = { daily: 0, weekly: 0, biweekly: 0, monthly: 0 };
+    const detailed = [];
+
+    items.forEach(item => {
+      let monthlyMins = 0;
+      if (item.freq === 'daily')    monthlyMins = item.mins * workingDays;
+      if (item.freq === 'weekly')   monthlyMins = item.mins * item.timesPerWeek * weeksInMonth;
+      if (item.freq === 'biweekly') monthlyMins = item.mins * 2;
+      if (item.freq === 'monthly')  monthlyMins = item.mins * 1;
+      byFreq[item.freq] += monthlyMins;
+      total += monthlyMins;
+      detailed.push({ ...item, monthlyMins });
+    });
+
+    return { total, byFreq, detailed, weeksInMonth };
+  }
+
+  /* ── Live Realista ── */
   function computeRealEff() {
     const workHours = parseFloat(document.getElementById('workHours').value) || 0;
     const totalMin = workHours * 60;
-    const { total: nonProdMin } = getNpData();
-    const prodMin = Math.max(0, totalMin - nonProdMin);
+    const { totalDaily } = getNpData();
+    const prodMin = Math.max(0, totalMin - totalDaily);
     return totalMin > 0 ? (prodMin / totalMin) * 100 : 0;
   }
-  function updateRealistaDisplay() {
-    const pct = computeRealEff();
-    document.getElementById('realEffDisplay').textContent = fmtPctNum(pct) + '%';
+
+  function computeMonthlyRealEff() {
+    const workHours   = parseFloat(document.getElementById('workHours').value)   || 0;
+    const workingDays = parseInt(document.getElementById('workingDays').value)    || 0;
+    const totalMonthlyMin = workHours * 60 * workingDays;
+    if (totalMonthlyMin <= 0) return 0;
+    const { items } = getNpData();
+    const weeksInMonth = Math.round(workingDays / 5) || 4;
+    let nonProdMonthly = 0;
+    items.forEach(item => {
+      if (item.freq === 'daily')    nonProdMonthly += item.mins * workingDays;
+      if (item.freq === 'weekly')   nonProdMonthly += item.mins * item.timesPerWeek * weeksInMonth;
+      if (item.freq === 'biweekly') nonProdMonthly += item.mins * 2;
+      if (item.freq === 'monthly')  nonProdMonthly += item.mins;
+    });
+    const prodMonthly = Math.max(0, totalMonthlyMin - nonProdMonthly);
+    return (prodMonthly / totalMonthlyMin) * 100;
   }
 
-  /* ── Validation ── */
+  function updateRealistaDisplay() {
+    document.getElementById('realEffDisplay').textContent = fmtPctNum(computeRealEff()) + '%';
+    const monthly = computeMonthlyRealEff();
+    const el = document.getElementById('monthlyRealEffDisplay');
+    if (el) el.textContent = monthly > 0 ? fmtPctNum(monthly) + '%' : '—';
+  }
+
   function showError(msg) {
     const el = document.getElementById('errorMsg');
     el.textContent = msg;
@@ -894,45 +1029,74 @@
     if (!otiPct  || otiPct  <= 0 || otiPct  > 100) { showError('Eficiência Otimista deve estar entre 1 e 100%.'); return; }
 
     const totalMin = workHours * 60;
-    const { items: npItems, total: nonProdMin } = getNpData();
+    const { items: npItems, dailyItems, totalDaily: nonProdMin } = getNpData();
     const prodMin = Math.max(0, totalMin - nonProdMin);
 
-    if (prodMin <= 0) { showError('As outras demandas consomem toda a jornada. Revise os valores.'); return; }
-    if (tmr > prodMin) { showError(`O TMR (${tmr} min) é maior que o tempo disponível para atendimento (${Math.round(prodMin)} min). Revise os valores.`); return; }
+    if (prodMin <= 0) { showError('As demandas diárias consomem toda a jornada. Revise os valores.'); return; }
+    if (tmr > prodMin) { showError(`O TMR (${tmr} min) é maior que o tempo disponível (${Math.round(prodMin)} min). Revise os valores.`); return; }
 
     const realEffPct = (prodMin / totalMin) * 100;
 
-    const scenarioDefs = [
+    // ── Daily scenarios ──
+    const dayScenarioDefs = [
       {
-        key: 'pessimista', tag: 'Pior Caso', label: 'Cenário Pessimista',
-        effPct: pessPct,
-        insight: 'Considera alta fricção operacional: interrupções frequentes, troca de contexto, demandas imprevistas e tempo de processamento entre atendimentos. Use como piso para SLAs e dimensionamento de risco.'
+        key: 'pessimista', tag: 'Pior Caso', label: 'Cenário Pessimista', effPct: pessPct,
+        insight: 'Considera alta fricção operacional: interrupções frequentes, troca de contexto e demandas imprevistas. Use como piso para SLAs e dimensionamento de risco.'
       },
       {
-        key: 'realista', tag: 'Cálculo Real', label: 'Cenário Realista',
-        effPct: realEffPct,
-        insight: 'Reflete a operação atual a partir das demandas paralelas informadas. Eficiência calculada automaticamente como (jornada − outras demandas) ÷ jornada. É o cenário de referência para planejamento.'
+        key: 'realista', tag: 'Cálculo Real', label: 'Cenário Realista', effPct: realEffPct,
+        insight: 'Baseado nas demandas diárias informadas. Eficiência = (jornada − demandas diárias) ÷ jornada. Referência para planejamento operacional.'
       },
       {
-        key: 'otimista', tag: 'Melhor Caso', label: 'Cenário Otimista',
-        effPct: otiPct,
-        insight: 'Representa um dia próximo do ideal: foco contínuo, mínimas distrações e fluxo otimizado. Útil para mapear o teto de capacidade e estabelecer metas de performance.'
+        key: 'otimista', tag: 'Melhor Caso', label: 'Cenário Otimista', effPct: otiPct,
+        insight: 'Representa um dia próximo do ideal: foco contínuo e fluxo otimizado. Útil para mapear o teto de capacidade e estabelecer metas.'
       }
     ];
 
-    const results = scenarioDefs.map(s => {
+    const results = dayScenarioDefs.map(s => {
       const eff = s.effPct / 100;
       const effMin = totalMin * eff;
       const perPersonDay = Math.floor(effMin / tmr) * simultaneous;
       const teamPerDay   = perPersonDay * teamSize;
-      const teamPerMonth = teamPerDay * workingDays;
-      return { ...s, eff, effMin, perPersonDay, teamPerDay, teamPerMonth };
+      return { ...s, eff, effMin, perPersonDay, teamPerDay };
+    });
+
+    // ── Monthly scenarios ──
+    const totalMonthlyMin = totalMin * workingDays;
+    const { total: monthlyNonProdMin, byFreq: monthlyByFreq, detailed: monthlyDetailed, weeksInMonth } =
+      computeMonthlyNonProd(npItems, workingDays);
+    const monthlyProdMin = Math.max(0, totalMonthlyMin - monthlyNonProdMin);
+    const monthlyRealEffPct = totalMonthlyMin > 0 ? (monthlyProdMin / totalMonthlyMin) * 100 : 0;
+
+    const monthScenarioDefs = [
+      {
+        key: 'pessimista', tag: 'Pior Caso', label: 'Cenário Pessimista', effPct: pessPct,
+        insight: 'Alto consumo de tempo imprevisto ao longo do mês. Use como piso de garantia para dimensionamento de SLAs mensais.'
+      },
+      {
+        key: 'realista', tag: 'Cálculo Real', label: 'Cenário Realista', effPct: monthlyRealEffPct,
+        insight: 'Considera todas as demandas cadastradas ponderadas pela frequência (diária, semanal, quinzenal, mensal). Referência para planejamento mensal.'
+      },
+      {
+        key: 'otimista', tag: 'Melhor Caso', label: 'Cenário Otimista', effPct: otiPct,
+        insight: 'Mês com máximo foco e mínimas fricções além das demandas já programadas. Use para definir metas agressivas de volume.'
+      }
+    ];
+
+    const monthlyResults = monthScenarioDefs.map(s => {
+      const eff = s.effPct / 100;
+      const effMonthlyMin = totalMonthlyMin * eff;
+      const perPersonMonth = Math.floor(effMonthlyMin / tmr) * simultaneous;
+      const teamPerMonth   = perPersonMonth * teamSize;
+      return { ...s, eff, effMonthlyMin, perPersonMonth, teamPerMonth };
     });
 
     lastCalc = {
       workHours, teamSize, workingDays, tmr, simultaneous,
       totalMin, nonProdMin, prodMin, realEffPct,
-      npItems, results
+      npItems, dailyItems, results,
+      totalMonthlyMin, monthlyNonProdMin, monthlyProdMin, monthlyRealEffPct,
+      monthlyByFreq, monthlyDetailed, weeksInMonth, monthlyResults
     };
 
     renderAll();
@@ -955,9 +1119,17 @@
   function renderAll() {
     if (!lastCalc) return;
     setTimestamp();
-    renderSummary();
     renderParams();
-    renderScenarios();
+    if (currentView === 'day') {
+      renderDailySummary();
+      renderDailyScenarios();
+      document.getElementById('monthlyBreakdown').style.display = 'none';
+    } else {
+      renderMonthlySummary();
+      renderMonthlyScenarios();
+      renderMonthlyBreakdown();
+      document.getElementById('monthlyBreakdown').style.display = 'block';
+    }
     renderCharts();
     renderAnalysis();
   }
@@ -970,22 +1142,22 @@
     document.getElementById('printDate').textContent     = 'Relatório gerado em ' + now;
   }
 
-  /* ── Summary ── */
-  function renderSummary() {
+  /* ── Daily Summary ── */
+  function renderDailySummary() {
     const c = lastCalc;
     const usagePct = c.nonProdMin > 0 ? Math.round((c.nonProdMin / c.totalMin) * 100) : 0;
     document.getElementById('summaryRow').innerHTML = `
       <div class="summary-card">
         <div class="s-value">${fmtMin(c.totalMin)}</div>
-        <div class="s-label">Jornada / Pessoa</div>
+        <div class="s-label">Jornada / Pessoa / Dia</div>
       </div>
       <div class="summary-card">
         <div class="s-value" style="color:#DC2626">${fmtMin(c.nonProdMin)}</div>
-        <div class="s-label">Outras Demandas (${usagePct}%)</div>
+        <div class="s-label">Demandas Diárias (${usagePct}%)</div>
       </div>
       <div class="summary-card">
         <div class="s-value" style="color:#059669">${fmtMin(c.prodMin)}</div>
-        <div class="s-label">Disponível p/ Atendimento</div>
+        <div class="s-label">Disponível Atend. / Dia</div>
       </div>
       <div class="summary-card">
         <div class="s-value" style="color:${BRAND_PINK}">${c.tmr} min</div>
@@ -998,7 +1170,35 @@
     `;
   }
 
-  /* ── Params (print only) ── */
+  /* ── Monthly Summary ── */
+  function renderMonthlySummary() {
+    const c = lastCalc;
+    const usagePct = c.monthlyNonProdMin > 0 ? Math.round((c.monthlyNonProdMin / c.totalMonthlyMin) * 100) : 0;
+    document.getElementById('summaryRow').innerHTML = `
+      <div class="summary-card">
+        <div class="s-value">${fmtMin(c.totalMonthlyMin)}</div>
+        <div class="s-label">Jornada / Pessoa / Mês</div>
+      </div>
+      <div class="summary-card">
+        <div class="s-value" style="color:#DC2626">${fmtMin(c.monthlyNonProdMin)}</div>
+        <div class="s-label">Total Demandas Mês (${usagePct}%)</div>
+      </div>
+      <div class="summary-card">
+        <div class="s-value" style="color:#059669">${fmtMin(c.monthlyProdMin)}</div>
+        <div class="s-label">Disponível Atend. / Mês</div>
+      </div>
+      <div class="summary-card">
+        <div class="s-value" style="color:${BRAND_PINK}">${c.tmr} min</div>
+        <div class="s-label">TMR / Atendimento</div>
+      </div>
+      <div class="summary-card">
+        <div class="s-value" style="color:${BRAND_NAVY}">${c.workingDays}d</div>
+        <div class="s-label">Dias Trabalhados</div>
+      </div>
+    `;
+  }
+
+  /* ── Params (print) ── */
   function renderParams() {
     const c = lastCalc;
     const tags = [
@@ -1008,17 +1208,18 @@
       `<span class="param-tag"><strong>TMR/TMA:</strong> ${c.tmr} min</span>`,
       `<span class="param-tag"><strong>Tickets simultâneos:</strong> ${c.simultaneous}</span>`,
       `<span class="param-tag"><strong>Efic. Pessimista:</strong> ${fmtPctNum(c.results[0].effPct)}%</span>`,
-      `<span class="param-tag"><strong>Efic. Realista:</strong> ${fmtPctNum(c.realEffPct)}%</span>`,
+      `<span class="param-tag"><strong>Efic. Realista (dia):</strong> ${fmtPctNum(c.realEffPct)}%</span>`,
+      `<span class="param-tag"><strong>Efic. Realista (mês):</strong> ${fmtPctNum(c.monthlyRealEffPct)}%</span>`,
       `<span class="param-tag"><strong>Efic. Otimista:</strong> ${fmtPctNum(c.results[2].effPct)}%</span>`,
     ];
-    c.npItems.forEach(i => tags.push(`<span class="param-tag"><strong>${i.name}:</strong> ${i.mins} min</span>`));
+    c.npItems.forEach(i => tags.push(
+      `<span class="param-tag"><strong>${i.name}:</strong> ${i.mins} min (${freqLabel(i.freq, i.timesPerWeek)})</span>`
+    ));
     document.getElementById('paramsList').innerHTML = tags.join('');
   }
 
-  /* ── Scenarios ── */
-  function renderScenarios() {
-    const isMonth = currentView === 'month';
-
+  /* ── Daily Scenarios ── */
+  function renderDailyScenarios() {
     document.getElementById('scenariosRow').innerHTML = lastCalc.results.map(r => `
       <div class="sc-card ${r.key}">
         <div class="sc-head">
@@ -1028,15 +1229,10 @@
         </div>
         <div class="sc-body">
           <div class="sc-main">
-            <div class="sc-period-block ${!isMonth ? 'active' : ''}" data-period="day">
+            <div class="sc-period-block active">
               <div class="big-num">${fmtNum(r.teamPerDay)}</div>
               <div class="big-label">atendimentos / dia</div>
               <div class="big-period">time · dia</div>
-            </div>
-            <div class="sc-period-block ${isMonth ? 'active' : ''}" data-period="month">
-              <div class="big-num">${fmtNum(r.teamPerMonth)}</div>
-              <div class="big-label">atendimentos / mês</div>
-              <div class="big-period">time · mês</div>
             </div>
           </div>
           <div class="sc-metrics">
@@ -1053,9 +1249,42 @@
               <span class="mv">${fmtPctNum(r.effPct)}%</span>
             </div>
           </div>
-          <div class="sc-alt">
-            <span class="alt-label">${isMonth ? 'capacidade / dia' : 'capacidade / mês'}</span>
-            <span class="alt-value">${fmtNum(isMonth ? r.teamPerDay : r.teamPerMonth)}</span>
+          <div class="sc-insight">${r.insight}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  /* ── Monthly Scenarios ── */
+  function renderMonthlyScenarios() {
+    document.getElementById('scenariosRow').innerHTML = lastCalc.monthlyResults.map(r => `
+      <div class="sc-card ${r.key}">
+        <div class="sc-head">
+          <div class="sc-badge">${r.tag}</div>
+          <h3>${r.label}</h3>
+          <div class="sc-eff">${fmtPctNum(r.effPct)}% de eficiência</div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-main">
+            <div class="sc-period-block active">
+              <div class="big-num">${fmtNum(r.teamPerMonth)}</div>
+              <div class="big-label">atendimentos / mês</div>
+              <div class="big-period">time · mês</div>
+            </div>
+          </div>
+          <div class="sc-metrics">
+            <div class="sc-metric">
+              <span class="ml">Por pessoa / mês</span>
+              <span class="mv">${fmtNum(r.perPersonMonth)} atend.</span>
+            </div>
+            <div class="sc-metric">
+              <span class="ml">Tempo efetivo / pessoa / mês</span>
+              <span class="mv">${fmtMin(r.effMonthlyMin)}</span>
+            </div>
+            <div class="sc-metric">
+              <span class="ml">Eficiência aplicada</span>
+              <span class="mv">${fmtPctNum(r.effPct)}%</span>
+            </div>
           </div>
           <div class="sc-insight">${r.insight}</div>
         </div>
@@ -1063,14 +1292,64 @@
     `).join('');
   }
 
+  /* ── Monthly Breakdown ── */
+  function renderMonthlyBreakdown() {
+    const c = lastCalc;
+    const freqGroups = [
+      { key: 'daily',    color: '#EF4465', title: `Diárias (${c.workingDays} dias úteis)` },
+      { key: 'weekly',   color: '#F59E0B', title: `Semanais (~${c.weeksInMonth} semanas/mês)` },
+      { key: 'biweekly', color: '#8B5CF6', title: 'Quinzenais (2× no mês)' },
+      { key: 'monthly',  color: '#06B6D4', title: 'Mensais (1× no mês)' },
+    ];
+
+    const sections = freqGroups.map(g => {
+      const items = c.monthlyDetailed.filter(i => i.freq === g.key);
+      return { ...g, items };
+    }).filter(g => g.items.length > 0);
+
+    if (sections.length === 0) {
+      document.getElementById('monthlyBreakdown').innerHTML = '';
+      return;
+    }
+
+    const sectionsHtml = sections.map(g => `
+      <div style="margin-bottom:14px">
+        <div class="mbd-freq-header" style="color:${g.color}">${g.title}</div>
+        <div class="mbd-grid">
+          ${g.items.map(i => `
+            <div class="mbd-item">
+              <span class="mbd-name" title="${i.name} — ${i.mins} min/ocorrência">${i.name}</span>
+              <span class="mbd-val">${fmtMin(i.monthlyMins)}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('monthlyBreakdown').innerHTML = `
+      <div class="monthly-breakdown">
+        <h4>Detalhamento das demandas no mês — por pessoa</h4>
+        ${sectionsHtml}
+        <div class="mbd-totals">
+          <div class="mbd-total red">
+            <span class="mbd-name">Total consumido por demandas</span>
+            <span class="mbd-val">${fmtMin(c.monthlyNonProdMin)}</span>
+          </div>
+          <div class="mbd-total green">
+            <span class="mbd-name">Disponível para atendimento</span>
+            <span class="mbd-val">${fmtMin(c.monthlyProdMin)}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   /* ── Charts ── */
   function renderCharts() {
     Object.keys(charts).forEach(k => { if (charts[k]) { charts[k].destroy(); charts[k] = null; } });
-
     Chart.defaults.font.family = '-apple-system, "Segoe UI", Roboto, sans-serif';
     Chart.defaults.font.size = 12;
     Chart.defaults.color = '#475569';
-
     renderChartTime();
     renderChartScenarios();
     renderChartTmr();
@@ -1082,7 +1361,7 @@
     const data   = [c.prodMin];
     const colors = ['#10B981'];
 
-    c.npItems.forEach((it, i) => {
+    c.dailyItems.forEach((it, i) => {
       labels.push(it.name);
       data.push(it.mins);
       colors.push(NP_PALETTE[i % NP_PALETTE.length]);
@@ -1092,21 +1371,15 @@
       type: 'doughnut',
       data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: '#fff', borderWidth: 2 }] },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: '62%',
+        responsive: true, maintainAspectRatio: false, cutout: '62%',
         plugins: {
-          legend: {
-            position: 'right',
-            labels: { boxWidth: 12, boxHeight: 12, padding: 10, font: { size: 11 } }
-          },
+          legend: { position: 'right', labels: { boxWidth: 12, boxHeight: 12, padding: 10, font: { size: 11 } } },
           tooltip: {
             callbacks: {
               label: (ctx) => {
                 const v = ctx.parsed;
                 const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
-                const pct = fmtPctNum((v / total) * 100);
-                return ` ${ctx.label}: ${fmtMin(v)} (${pct}%)`;
+                return ` ${ctx.label}: ${fmtMin(v)} (${fmtPctNum((v / total) * 100)}%)`;
               }
             }
           }
@@ -1117,58 +1390,29 @@
 
   function renderChartScenarios() {
     const c = lastCalc;
-    const labels = c.results.map(r => r.label.replace('Cenário ', ''));
-    const dayData = c.results.map(r => r.teamPerDay);
-    const monthData = c.results.map(r => r.teamPerMonth);
+    const labels   = c.results.map(r => r.label.replace('Cenário ', ''));
+    const dayData   = c.results.map(r => r.teamPerDay);
+    const monthData = c.monthlyResults.map(r => r.teamPerMonth);
 
     charts.scenarios = new Chart(document.getElementById('chartScenarios'), {
       type: 'bar',
       data: {
         labels,
         datasets: [
-          {
-            label: 'Por dia',
-            data: dayData,
-            backgroundColor: BRAND_PINK,
-            borderRadius: 6,
-            yAxisID: 'y',
-            maxBarThickness: 36
-          },
-          {
-            label: 'Por mês',
-            data: monthData,
-            backgroundColor: BRAND_NAVY,
-            borderRadius: 6,
-            yAxisID: 'y1',
-            maxBarThickness: 36
-          }
+          { label: 'Por dia',  data: dayData,   backgroundColor: BRAND_PINK, borderRadius: 6, yAxisID: 'y',  maxBarThickness: 36 },
+          { label: 'Por mês',  data: monthData, backgroundColor: BRAND_NAVY, borderRadius: 6, yAxisID: 'y1', maxBarThickness: 36 }
         ]
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
+        responsive: true, maintainAspectRatio: false,
         plugins: {
           legend: { position: 'top', labels: { boxWidth: 14, padding: 12 } },
-          tooltip: {
-            callbacks: { label: (ctx) => ` ${ctx.dataset.label}: ${fmtNum(ctx.parsed.y)} atend.` }
-          }
+          tooltip: { callbacks: { label: (ctx) => ` ${ctx.dataset.label}: ${fmtNum(ctx.parsed.y)} atend.` } }
         },
         scales: {
           x: { grid: { display: false } },
-          y: {
-            beginAtZero: true,
-            position: 'left',
-            grid: { color: '#F1F5F9' },
-            ticks: { color: BRAND_PINK, callback: (v) => fmtNum(v) },
-            title: { display: true, text: 'Por dia', color: BRAND_PINK, font: { weight: '600', size: 11 } }
-          },
-          y1: {
-            beginAtZero: true,
-            position: 'right',
-            grid: { display: false },
-            ticks: { color: BRAND_NAVY, callback: (v) => fmtNum(v) },
-            title: { display: true, text: 'Por mês', color: BRAND_NAVY, font: { weight: '600', size: 11 } }
-          }
+          y:  { beginAtZero: true, position: 'left',  grid: { color: '#F1F5F9' }, ticks: { color: BRAND_PINK, callback: v => fmtNum(v) }, title: { display: true, text: 'Por dia',  color: BRAND_PINK, font: { weight: '600', size: 11 } } },
+          y1: { beginAtZero: true, position: 'right', grid: { display: false },   ticks: { color: BRAND_NAVY, callback: v => fmtNum(v) }, title: { display: true, text: 'Por mês',  color: BRAND_NAVY, font: { weight: '600', size: 11 } } }
         }
       }
     });
@@ -1177,39 +1421,29 @@
   function renderChartTmr() {
     const c = lastCalc;
     const isMonth = currentView === 'month';
-    const periodMult = isMonth ? c.workingDays : 1;
-    const realEff = c.realEffPct / 100;
     const periodLabel = isMonth ? 'mês' : 'dia';
+    const realEff = isMonth ? c.monthlyRealEffPct / 100 : c.realEffPct / 100;
+    const baseMin = isMonth ? c.totalMonthlyMin : c.totalMin;
 
     document.getElementById('chartTmrSub').textContent =
       `Impacto na capacidade caso o TMR aumente ou diminua — visão ${periodLabel}`;
 
     const variations = [-30, -15, 0, 15, 30];
-    const labels = variations.map(v => v === 0 ? `TMR atual\n${c.tmr} min` : `${v > 0 ? '+' : ''}${v}%\n${(c.tmr * (1 + v/100)).toFixed(1).replace('.0','')} min`);
+    const labels = variations.map(v =>
+      v === 0 ? `TMR atual\n${c.tmr} min` : `${v > 0 ? '+' : ''}${v}%\n${(c.tmr * (1 + v/100)).toFixed(1).replace('.0','')} min`
+    );
     const data = variations.map(v => {
       const tmrV = c.tmr * (1 + v/100);
       if (tmrV <= 0) return 0;
-      const perPersonDay = Math.floor((c.totalMin * realEff) / tmrV) * c.simultaneous;
-      return perPersonDay * c.teamSize * periodMult;
+      return Math.floor((baseMin * realEff) / tmrV) * c.simultaneous * c.teamSize;
     });
-
     const colors = variations.map(v => v === 0 ? BRAND_PINK : (v < 0 ? '#059669' : '#DC2626'));
 
     charts.tmr = new Chart(document.getElementById('chartTmr'), {
       type: 'bar',
-      data: {
-        labels,
-        datasets: [{
-          label: `Capacidade ${periodLabel}`,
-          data,
-          backgroundColor: colors,
-          borderRadius: 8,
-          maxBarThickness: 90
-        }]
-      },
+      data: { labels, datasets: [{ label: `Capacidade ${periodLabel}`, data, backgroundColor: colors, borderRadius: 8, maxBarThickness: 90 }] },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
+        responsive: true, maintainAspectRatio: false,
         plugins: {
           legend: { display: false },
           tooltip: {
@@ -1221,11 +1455,7 @@
         },
         scales: {
           x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-          y: {
-            beginAtZero: true,
-            grid: { color: '#F1F5F9' },
-            ticks: { callback: (v) => fmtNum(v) }
-          }
+          y: { beginAtZero: true, grid: { color: '#F1F5F9' }, ticks: { callback: v => fmtNum(v) } }
         }
       },
       plugins: [{
@@ -1247,52 +1477,56 @@
   /* ── Analysis ── */
   function renderAnalysis() {
     const c = lastCalc;
-    const [pess, real, oti] = c.results;
-    const nonprodPct = c.nonProdMin > 0 ? Math.round((c.nonProdMin / c.totalMin) * 100) : 0;
-    const gapDay   = oti.teamPerDay   - pess.teamPerDay;
-    const gapMonth = oti.teamPerMonth - pess.teamPerMonth;
-    const gapPct   = pess.teamPerDay > 0 ? Math.round((gapDay / pess.teamPerDay) * 100) : 0;
+    const isMonth = currentView === 'month';
+    const results = isMonth ? c.monthlyResults : c.results;
+    const [pess, real, oti] = results;
+    const mainKey = isMonth ? 'teamPerMonth' : 'teamPerDay';
+    const periodLabel = isMonth ? 'mês' : 'dia';
+
+    const nonprodPct = isMonth
+      ? Math.round((c.monthlyNonProdMin / c.totalMonthlyMin) * 100)
+      : Math.round((c.nonProdMin / c.totalMin) * 100);
+
+    const gapMain = oti[mainKey] - pess[mainKey];
+    const gapPct  = pess[mainKey] > 0 ? Math.round((gapMain / pess[mainKey]) * 100) : 0;
+
+    const realEffForCalc = isMonth ? c.monthlyRealEffPct : c.realEffPct;
+    const totalMinForCalc = isMonth ? c.totalMonthlyMin : c.totalMin;
 
     let tmrInsight = '';
     if (c.tmr > 1) {
-      const reducedTmr = c.tmr - 1;
-      const newPerPerson = Math.floor((c.totalMin * (c.realEffPct / 100)) / reducedTmr) * c.simultaneous;
-      const newDay   = newPerPerson * c.teamSize;
-      const newMonth = newDay * c.workingDays;
-      const gainDay   = newDay   - real.teamPerDay;
-      const gainMonth = newMonth - real.teamPerMonth;
-      tmrInsight = `Com TMR atual de <strong>${c.tmr} min</strong>, cada redução de 1 minuto pode agregar aproximadamente <strong>+${fmtNum(gainDay)} atend./dia</strong> e <strong>+${fmtNum(gainMonth)} atend./mês</strong> no cenário realista. Automações, templates e processos bem definidos são a alavanca de maior impacto.`;
+      const gain = Math.floor((totalMinForCalc * (realEffForCalc / 100)) / (c.tmr - 1)) * c.simultaneous * c.teamSize - real[mainKey];
+      tmrInsight = `Com TMR atual de <strong>${c.tmr} min</strong>, cada redução de 1 minuto pode agregar aproximadamente <strong>+${fmtNum(gain)} atend./${periodLabel}</strong> no cenário realista. Automações, templates e processos bem definidos são a maior alavanca.`;
     } else {
       tmrInsight = `O TMR está em <strong>${c.tmr} min</strong>. Manter a eficiência nesse nível requer processos muito bem estruturados.`;
     }
 
     let simInsight = '';
     if (c.simultaneous === 1) {
-      const dobroDay   = Math.floor((c.totalMin * (c.realEffPct / 100)) / c.tmr) * 2 * c.teamSize;
-      const dobroMonth = dobroDay * c.workingDays;
-      simInsight = `O time opera com <strong>1 ticket por vez</strong>. Se o fluxo permitir <strong>2 simultâneos</strong>, a capacidade realista pode chegar a <strong>${fmtNum(dobroDay)} atend./dia</strong> (<strong>${fmtNum(dobroMonth)} atend./mês</strong>). Avalie viabilidade sem comprometer a qualidade.`;
+      const dobro = Math.floor((totalMinForCalc * (realEffForCalc / 100)) / c.tmr) * 2 * c.teamSize;
+      simInsight = `O time opera com <strong>1 ticket por vez</strong>. Com <strong>2 simultâneos</strong>, a capacidade realista poderia chegar a <strong>${fmtNum(dobro)} atend./${periodLabel}</strong>. Avalie sem comprometer a qualidade.`;
     } else {
-      simInsight = `O time já trabalha com <strong>${c.simultaneous} tickets simultâneos</strong>, o que multiplica a capacidade. Monitore qualidade e tempo de resposta para garantir que o paralelismo não esteja afetando a experiência do paciente.`;
+      simInsight = `O time já trabalha com <strong>${c.simultaneous} tickets simultâneos</strong>. Monitore qualidade e tempo de resposta para garantir que o paralelismo não afete a experiência.`;
     }
 
     const items = [
       {
         color: BRAND_PINK,
-        text: `<strong>Referência de planejamento:</strong> O cenário realista aponta <strong>${fmtNum(real.teamPerDay)} atend./dia</strong> e <strong>${fmtNum(real.teamPerMonth)} atend./mês</strong>. Os extremos vão de <strong>${fmtNum(pess.teamPerDay)}/dia (${fmtNum(pess.teamPerMonth)}/mês)</strong> no pessimista até <strong>${fmtNum(oti.teamPerDay)}/dia (${fmtNum(oti.teamPerMonth)}/mês)</strong> no otimista. Use o realista como base para SLAs e o pessimista como piso de garantia.`
+        text: `<strong>Referência de planejamento:</strong> Cenário realista aponta <strong>${fmtNum(real[mainKey])} atend./${periodLabel}</strong>. Extremos: <strong>${fmtNum(pess[mainKey])}</strong> (pessimista) a <strong>${fmtNum(oti[mainKey])}</strong> (otimista). Use o realista como base para SLAs e o pessimista como piso de garantia.`
       },
       {
         color: nonprodPct >= 30 ? '#DC2626' : '#D97706',
-        text: `<strong>Impacto das outras demandas:</strong> ${nonprodPct}% da jornada é consumida por atividades paralelas (${fmtMin(c.nonProdMin)} de ${fmtMin(c.totalMin)}/pessoa/dia). ${nonprodPct >= 30 ? 'Está alto — revise se cerimônias podem ser assíncronas, mais curtas ou menos frequentes.' : 'Está em faixa saudável; otimizações ainda geram ganho marginal.'}`
+        text: `<strong>Impacto das demandas${isMonth ? ' no mês' : ' diárias'}:</strong> ${nonprodPct}% da jornada ${isMonth ? 'mensal' : ''} é consumida por atividades paralelas. ${nonprodPct >= 30 ? 'Está alto — revise se cerimônias podem ser assíncronas, mais curtas ou menos frequentes.' : 'Está em faixa saudável; otimizações ainda geram ganho marginal.'}`
       },
       {
         color: '#059669',
-        text: `<strong>Variação entre cenários:</strong> Diferença de <strong>${fmtNum(gapDay)} atend./dia (${fmtNum(gapMonth)}/mês — ${gapPct}%)</strong> entre pessimista e otimista. Esse intervalo representa a oscilação esperada e ajuda a dimensionar buffers de capacidade.`
+        text: `<strong>Variação entre cenários:</strong> Diferença de <strong>${fmtNum(gapMain)} atend. (${gapPct}%)</strong> entre pessimista e otimista. Esse intervalo representa a oscilação esperada e ajuda a dimensionar buffers de capacidade.`
       },
       { color: '#0284C7', text: `<strong>TMR como principal alavanca:</strong> ${tmrInsight}` },
       { color: '#7C3AED', text: `<strong>Atendimento simultâneo:</strong> ${simInsight}` },
       {
         color: BRAND_NAVY,
-        text: `<strong>Escalonamento do time:</strong> Para dobrar a capacidade realista (<strong>${fmtNum(real.teamPerDay)} → ${fmtNum(real.teamPerDay * 2)} atend./dia</strong> / <strong>${fmtNum(real.teamPerMonth)} → ${fmtNum(real.teamPerMonth * 2)} atend./mês</strong>) sem mudar processos, seriam necessárias <strong>${c.teamSize} pessoas adicionais</strong> (total de ${c.teamSize * 2}). Compare esse custo com o ganho potencial via redução de TMR ou de demandas paralelas.`
+        text: `<strong>Escalonamento do time:</strong> Para dobrar a capacidade realista (<strong>${fmtNum(real[mainKey])} → ${fmtNum(real[mainKey] * 2)} atend./${periodLabel}</strong>), seriam necessárias <strong>${c.teamSize} pessoas adicionais</strong> (total de ${c.teamSize * 2}). Compare esse custo com ganhos via redução de TMR ou de demandas paralelas.`
       }
     ];
 
@@ -1315,12 +1549,17 @@
     setTimeout(() => window.print(), 100);
   }
 
-  /* ── Init: live Realista ── */
+  /* ── Init ── */
   document.addEventListener('DOMContentLoaded', () => {
     updateRealistaDisplay();
     document.getElementById('workHours').addEventListener('input', updateRealistaDisplay);
+    document.getElementById('workingDays').addEventListener('input', updateRealistaDisplay);
     document.getElementById('npList').addEventListener('input', (e) => {
-      if (e.target.classList.contains('np-minutes')) updateRealistaDisplay();
+      if (e.target.classList.contains('np-minutes') ||
+          e.target.classList.contains('np-times-week')) updateRealistaDisplay();
+    });
+    document.getElementById('npList').addEventListener('change', (e) => {
+      if (e.target.classList.contains('np-freq')) updateRealistaDisplay();
     });
   });
 </script>
